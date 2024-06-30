@@ -36,6 +36,8 @@
 #### **Apply 4_3_tests_refactoring.patch**
 > - Переименовал класс генерации матчеров в `MatcherFactory`
 > - Переименовал статический метод генерации ([Блох Джошуа, "Java. Эффективное программирование."](http://javaops.ru/view/books)) на `usingIgnoringFieldsComparator`.
+ См. также [Java Constructors vs Static Factory Methods](https://www.baeldung.com/java-constructors-vs-static-factory-methods)
+
 
 #### **Apply 4_4_HW3_fix_logging.patch**
 - [Вызов статического метода из конфигурации спринга](https://stackoverflow.com/a/27296470/548473) 
