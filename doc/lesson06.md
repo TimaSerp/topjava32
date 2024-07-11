@@ -11,7 +11,10 @@
   
 Перед просмотром разбора домашнего задания еще раз ознакомьтесь с материалом по ссылке:
 
-- <a href="https://jira.spring.io/browse/DATAJPA-601">readOnly и Propagation.SUPPORTS</a> (без транзакции не будет оптимизации по флагу `readOnly` при выполнении JDBC и в управлении ресурсами Spring's JPA, в том числе выключение `flush`)
+- <a href="https://github.com/spring-projects/spring-data-jpa/issues/987">readOnly и Propagation.SUPPORTS</a> (без транзакции не будет оптимизации по флагу `readOnly` при выполнении JDBC и в управлении ресурсами Spring's JPA, в том числе выключение `flush`).  
+Однако, несмотря на ссылку выше и то, что в репозиториях Spring Data JPA (посмотрите `SimpleJpaRepository`) используются `@Transactional(readOnly = true)`, все не так просто в мире программирования.
+Вот еще несколько интересных ссылок: [Discuss about the optimization of read-only transactions](https://github.com/spring-projects/spring-data-jpa/issues/1544) и [Опять транзакции…](https://habr.com/ru/articles/803395/)  
+В итоге все опять делается так, как это принято тимлидом на проекте. 
 
 В нашем приложении над репозиториями **CrudMealRepository** и **CrudUserRepository** указана аннотация
 **@Transactional(readOnly = true)**, что предполагает выполнение всех операций в репозитории внутри транзакции на
