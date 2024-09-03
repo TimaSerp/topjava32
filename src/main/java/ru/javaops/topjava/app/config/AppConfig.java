@@ -12,6 +12,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 import org.springframework.http.ProblemDetail;
+import org.springframework.http.converter.json.ProblemDetailJacksonMixin;
 import ru.javaops.topjava.common.util.JsonUtil;
 
 import java.sql.SQLException;
@@ -35,9 +36,7 @@ public class AppConfig {
 
     //   https://stackoverflow.com/a/74630129/548473
     @JsonAutoDetect(fieldVisibility = NONE, getterVisibility = ANY)
-    interface MixIn {
-        @JsonAnyGetter
-        Map<String, Object> getProperties();
+    interface MixIn extends ProblemDetailJacksonMixin {
     }
 
     @Autowired
