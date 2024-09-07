@@ -1,3 +1,5 @@
+ССЫЛКА НА ГУГЛ ДИСК: https://drive.google.com/drive/u/0/folders/0B9Ye2auQ_NsFflp6ZHBLSFI2OGVEZ2NQU0pzZkx4SnFmOWlzX0lzcDFjSi1SRk5OdzBYYkU?resourcekey=0-Jj2E8WHk9aIhoCMP4FQrzg
+
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/bee16f3145654047a0505c62aeefd8a2)](https://app.codacy.com/gh/JavaWebinar/topjava/dashboard)
 
 Java Enterprise Online Project
